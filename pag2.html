@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pag2.css" />
+    <title>Document</title>
+    <script src="pag2.js" defer></script>
+    <script src="storage.js"></script>
+  </head>
+  <body>
+    <form action="">
+      <label>Nome</label>
+      <input type="text" id="name" oninput="salva_nome()" />
+      <label>TELEFONE</label>
+      <input
+        type="tel"
+        placeholder="(xx) x xxxx-xxxx"
+        id="telefone"
+        oninput="mascara_telefone()"
+        maxlength="15"
+      />
+      <label>Email</label>
+      <input
+        type="text"
+        placeholder=""
+        id="email"
+        oninput="mascara_email()"
+        maxlength=""
+      />
+      <label>CPF</label>
+      <input
+        type="text"
+        placeholder="xxx.xxx.xxx-xx"
+        id="cpf"
+        oninput="mascara_cpf()"
+        maxlength="14"
+      />
+      <label>Senha</label>
+      <input type="text" placeholder="********" id="senha" maxlength="8" />
+
+      
+      
+    </form>
+    
+    <button id="abrir" class="enviar" onclick="abrirFechar()">Enviar</button>
+  
+    <dialog id="modal" >
+      <div class="modal-header">
+        <h2>Modal</h2>
+      </div>
+      <div id="modal-body"></div>
+      <button id="fechar" onclick="Fechar()">Fechar</button>
+    </dialog>
+  </body>
+</html>
